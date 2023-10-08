@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>getDownTown toggle/slider with Vue </title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+   <section class="menu-header"><nav class="secondary">
+    <ul class="secondary_list">
+      <a href="">
+        <li class="secondary_list--item">For Employers |</li>
+      </a>
+      <a href="">
+        <li class="secondary_list--item">Contact Us</li>
+      </a>
+    </ul>
+  </nav>
+<div class="container">
+  <ul id="nav">
+    <li class="main-logo"> <img src='img/gdt_logo.svg' alt=''></li>
+    <li class="toggle">
+      <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+    </li>
+    <li><a href=""> Communter Resoures</a></li>
+    <li><a href="">GetDownTown Events</a></li>
+    <li><a href="">About GetDownTown</a></li>
+    <li><a href="">goPASS</a></li>    
+  </ul>
+  </div>
+   </section>
+<section class="hero">
+<h1 class="homepage_title">
+    <span>Your Communte</span>
+    Made Simple
+  </h1>
+</section>
+  <div class="circle"></div>
+
+<!--slider-->
+<section class="sliders">
+
+<h2 class=" section-title">Getting Around</h2>
+<div id="example-1" class="slider-container">
+      <button class="slider--button" @click="show = !show">
+    <span class="svg-down_arrow"></span>
+  </button>
+ <transition name="slide-fade" mode="out-in">
+    <div key="3" v-if="!show" class="intial_state slider">
+    <div class="icon icon_circle">
+      <div class="icon_wrap">
+        <img src='img/bus.svg'  alt=''>
+      </div>
+    </div>
+
+    <h2 class="slider--title">BUS</h2>
+
+
+  </div>
+
+    <div v-if="show" class="icon_wrap--large">
+      <div class="icon_large">
+       <img src='img/bus.svg'  alt=''>
+      </div>
+       <div class="slider__description">
+      <h2>Bus</h2>
+      <p>Using the bus can be a convenient and cost-effective way to getDowntown. Whether you live in Ann Arbor, Ypsilanti, or in another county, there's a bus service that fits your needs.</p>
+    </div>
+    </div>
+  </transition>
+</div>
+
+<div id="example-2" class="slider-container">
+  <button class="slider--button" @click="show = !show">
+    <span class="svg-down_arrow"></span>
+  </button>
+   <transition name="slide-fade" mode="out-in">
+    <div key="3" v-if="!show" class=" intial_state slider slider--green">
+    <div class="icon icon_circle icon_circle--green">
+      <div class="icon_wrap">
+        <img class="walk" src='img/walker.svg'  alt=''>
+      </div>
+    </div>
+
+    <h2 class="slider--title">Walk</h2>
+  </div>
+
+
+    <div v-if="show" class="icon_wrap--large icon_wrap--green">
+      <div class=" icon_large icon_large--green">
+       <img src='img/walker.svg'  alt=''>
+      </div>
+       <div class="slider__description">
+      <h2>Walk</h2>
+      <p>Using the bus can be a convenient and cost-effective way to getDowntown. Whether you live in Ann Arbor, Ypsilanti, or in another county, there's a bus service that fits your needs.</p>
+    </div>
+    </div>
+  </transition>
+</div>
+  <div id="example-3" class="slider-container">
+  <button class="slider--button" @click="show = !show">
+    <span class="svg-down_arrow"></span>
+  </button>
+   <transition name="slide-fade" mode="out-in">
+    <div key="3" v-if="!show" class="intial_state slider slider--orange">
+    <div  class="icon icon_circle icon_circle--orange">
+      <div class="icon_wrap">
+        <img src='img/biker.svg'  alt=''>
+      </div>
+    </div>
+
+    <h2 class="slider--title">Bike</h2>
+
+
+  </div>
+
+    <div key="1" v-if="show" class="icon_wrap--large icon_wrap--orange">
+      <div class="icon_large icon_large--orange">
+       <img src='img/biker.svg'  alt=''>
+      </div>
+       <div class="slider__description">
+       <h2>Bike</h2>
+      <p>Using the bus can be a convenient and cost-effective way to getDowntown. Whether you live in Ann Arbor, Ypsilanti, or in another county, there's a bus service that fits your needs.</p>
+    </div>
+    </div>
+  </transition>
+</div>
+  <div id="example-4" class="slider-container">
+    <button class="slider--button" @click="show = !show">
+    <span class="svg-down_arrow"></span>
+  </button>
+  <transition name="slide-fade" mode="out-in">
+    <div key="3" v-if="!show" class="intial_state slider slider--purple">
+    <div class="icon icon_circle icon_circle--purple">
+      <div class="icon_wrap">
+        <img src='img/car.svg'  alt=''>
+      </div>
+    </div>
+
+    <h2 class="slider--title">Car</h2>
+
+
+  </div>
+ 
+    <div v-if="show" class="icon_wrap--large icon_wrap--purple">
+      <div class="icon_large icon_large--purple">
+       <img src='img/car.svg'  alt=''>
+      </div>
+      <div class="slider__description">
+      <h2>Car</h2>
+      <p>Using the bus can be a convenient and cost-effective way to getDowntown. Whether you live in Ann Arbor, Ypsilanti, or in another county, there's a bus service that fits your needs.</p>
+    </div>
+    </div>
+  </transition>
+</div>
+  </section>
+
+<!--get connected-->
+<section class="event">
+  <h2 class=" section-title section-title--lined">Events</h2>
+   <div class="event_wrap flex-wrap">
+  <div class="event_image--wrap">
+   <img src='img/placeholder.png' alt=''>
+  </div>
+     <div class="event_text-wrap">
+        <h3 class="event_title">Bike to Work day</h3>
+  <p class="event_description">On National Bike to Work Day - May 18, 2018, organizations throughout the Ann Arbor area will set up Bike Commuting Stations with food, drinks, and giveaways.</p>
+       <button class="event_button">
+         Register Now
+       </button>
+     </div>
+  
+</section>
+
+<section>
+<div class="submit flex-wrap">
+  <div class= submit_description>
+    <h3>Stay Informed</h3>
+    <p>Add your email for updates and upcoming events</p>
+  </div>
+    <form  class="flex-form">
+      <label for="from">
+      </label>
+      <input class="input-border" type="search" placeholder="">
+       <input type="submit" value="Submit">
+    </form>
+ 
+  </div>
+</section>
+  <script src='js/vue.min.js'></script>
+<script src='js/TweenMax.min.js'></script>
+<script src='js/jquery.min.js'></script>
+
+  
+
+    <script  src="js/script.js"></script>
+
+
+
+
+</body>
+
+</html>
